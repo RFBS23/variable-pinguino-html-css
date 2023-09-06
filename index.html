@@ -227,3 +227,17 @@
     <div class="beak-bottom"></div>
   </div>
 </div>
+
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "6ae05d39-7eb1-46d4-a61b-9eda266fbba5", // The ID of this integration.
+    region: "us-south", // The region your integration is hosted in.
+    serviceInstanceID: "accc0fe9-346e-498f-9ffd-fb85b64383b8", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
